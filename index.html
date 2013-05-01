@@ -28,8 +28,8 @@
          ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
          ref.addEventListener('exit', function() { alert(event.type); });
          setTimeout(function() {
-             ref.close();
-         }, 1000);
+             onDeviceReady();
+         }, 5000);
          
         }
 
