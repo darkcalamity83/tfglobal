@@ -23,12 +23,15 @@
          ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
          ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
          ref.addEventListener('exit', function() { alert(event.type); });
+         setTimeout(function() {
+             ref.close();
+         }, 1000);
          
         }
 
         </script>
     </head>
-    <body onload="onBodyLoad()" background="nymobilesplash.png" style="background-repeat: no-repeat">
+    <body onload="onBodyLoad()" background="nymobilesplash.png" style="background-repeat: no-repeat; background-size:cover">
     <h1>Hey, it's TF Globlal Mobile!</h1>
     <a href="https://ibank.nyteamfcu.org/"><img src="nymobilesq.jpg" alt="logo"/></a>
     <script type="text/javascript">
