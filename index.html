@@ -13,18 +13,21 @@
         function onBodyLoad()
         {       
             document.addEventListener("deviceready", onDeviceReady, false);
-            window.location.href="https://ibank.nyteamfcu.org/";
+    
         }
 
         function onDeviceReady()
         {
             // do your thing!
-            navigator.app.loadUrl("https://ibank.nyteamfcu.org/");
+            var ref = window.open('https://ibank.nyteamfcu.org/', 'self', 'location=yes');
+         ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
+         ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
+         ref.addEventListener('exit', function() { alert(event.type); });
         }
 
         </script>
     </head>
-    <body onload="onBodyLoad()" style="background-image: 'nymobilesplash.png'">
+    <body onload="onBodyLoad()" background="Imgs/nymobilesplash.png">
     <h1>Hey, it's TF Globlal Mobile!</h1>
     <a href="https://ibank.nyteamfcu.org/"><img src="nymobilesq.jpg" alt="logo"/></a>
     <script type="text/javascript">
