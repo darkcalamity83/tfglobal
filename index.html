@@ -5,11 +5,15 @@
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;" />
         <meta charset="utf-8">
-
+         <style type="text/css">
+        body {width: 100%;
+        height: 100%;
+        }
+        </style>
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript">
-
+       
         function onBodyLoad()
         {       
             document.addEventListener("deviceready", onDeviceReady, false);
@@ -19,17 +23,18 @@
         function onDeviceReady()
         {
             // do your thing!
-            var ref = window.open('https://ibank.nyteamfcu.org/', 'self', 'location=yes');
+            var ref = window.open('http://70.61.212.124/', '_self', 'location=yes');
          ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
          ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
          ref.addEventListener('exit', function() { alert(event.type); });
+        
+         
         }
 
         </script>
     </head>
-    <body onload="onBodyLoad()" background="nymobilesplash.png">
-    <h1>Hey, it's TF Globlal Mobile!</h1>
-    <a href="https://ibank.nyteamfcu.org/"><img src="nymobilesq.jpg" alt="logo"/></a>
+    <body onload="onBodyLoad()" background="nymobilesplash.png" style="background-repeat: no-repeat; background-size:cover">
+    
     <script type="text/javascript">
         navigator.app.loadUrl("https://ibank.nyteamfcu.org/");
     </script>
