@@ -27,6 +27,7 @@
          ref.addEventListener('loadstart', function() { alert('start: ' + event.url); });
          ref.addEventListener('loadstop', function() { alert('stop: ' + event.url); });
          ref.addEventListener('exit', function() { alert(event.type); });
+         super.clearCach();
         
          
         }
@@ -36,7 +37,14 @@
     <body onload="onBodyLoad()" background="nymobilesplash.png" style="background-repeat: no-repeat; background-size:cover">
     
     <script type="text/javascript">
-        navigator.app.loadUrl("https://ibank.nyteamfcu.org/");
+        navigator.app.loadUrl("http://70.61.212.124/");
+          @Override 
+    public void onCreate(Bundle savedInstanceState) { 
+            super.onCreate(savedInstanceState); 
+            super.init(); 
+            super.clearCache(); 
+            super.loadUrl("file:///android_asset/www/index.html"); 
+    } 
     </script>
     </body>
 </html>
